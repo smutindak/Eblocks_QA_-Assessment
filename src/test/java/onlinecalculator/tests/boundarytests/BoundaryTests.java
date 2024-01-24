@@ -72,11 +72,15 @@ public class BoundaryTests extends BaseSuiteSetup {
         calcPage.enterNumber(2);
         calcPage.enterOperator("=");
         calcPage.enterOperator("c");
+
+        String formattedClearActualResult = calcPage.getResultNonFormatted();
+
+        Assert.assertEquals(formattedClearActualResult, "0");
+
         calcPage.enterNumber(3);
         calcPage.enterOperator("*");
         calcPage.enterNumber(2);
         calcPage.enterOperator("=");
-
 
         String formattedActualResult = calcPage.getResultNonFormatted();
 
