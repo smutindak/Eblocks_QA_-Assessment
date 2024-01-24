@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test name="Online Calculator Tests">
+        <classes>
+            <class name="onlinecalculator.tests.positivetests.PositiveTests"/>
+            <class name="onlinecalculator.tests.negativetests.NegativeTests"/>
+            <class name="onlinecalculator.tests.boundarytests.BoundaryTests"/>
+        </classes>
+    </test>
+</suite>
