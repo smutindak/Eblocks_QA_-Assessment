@@ -6,6 +6,7 @@
         <listener class-name="onlinecalculator.listeners.TestListener"/>
     </listeners>
     <test name="Online Calculator Tests">
+        <parameter name="browser" value="firefox"/>
         <classes>
             <class name="onlinecalculator.tests.positivetests.PositiveTests"/>
         </classes>

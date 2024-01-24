@@ -79,7 +79,7 @@ public class DriverManager {
     private static void setupChromeDriver() {
         LOG.info("Setting up Chrome Driver....");
         final var isHeadless = Boolean.parseBoolean(
-                Objects.requireNonNullElse(System.getProperty("headless"), "true"));
+                Objects.requireNonNullElse(System.getProperty("headless"), "false"));
         final var chromePrefs = new HashMap<String, Object>();
         chromePrefs.put("safebrowsing.enabled", "true");
         chromePrefs.put("download.default_directory",
@@ -113,7 +113,7 @@ public class DriverManager {
         final var options = new FirefoxOptions();
         options.addArguments(NO_SANDBOX);
         options.addArguments(DISABLE_DEV_SHM);
-        options.addArguments(HEADLESS);
+        //options.addArguments(HEADLESS);
         setDriver(WebDriverManager.firefoxdriver()
                 .capabilities(options)
                 .create());

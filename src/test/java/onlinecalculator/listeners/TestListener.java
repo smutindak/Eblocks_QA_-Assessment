@@ -47,11 +47,11 @@ public class TestListener implements ITestListener {
     }
 
     public void takeScreenShot(ITestResult result) {
-        try {
-            Thread.sleep(1500);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+//        try {
+//            Thread.sleep(1500);
+//        } catch (InterruptedException e) {
+//            throw new RuntimeException(e);
+//        }
         // Get the test class name
         String testClassName = result.getTestClass().getName();
 

@@ -103,6 +103,7 @@ The testing will be conducted in multiple phases to cover positive, negative, an
 ### 6.2 Test Execution Criteria
 - All test cases should be executed on different browsers (Chrome, Firefox).
 - Test cases should pass on the latest stable browser versions.
+- Test cases have been organized in test profiles to run each test suite on their own.
 
 ### 6.3 Test Pass/Fail Criteria
 A test case is considered passed if the calculator provides the expected result and behavior. It is considered failed if the calculator crashes, hangs, or produces incorrect results. Failed test cases must be documented with detailed information such as screenshots on the observed behavior.

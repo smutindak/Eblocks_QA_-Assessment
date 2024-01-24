@@ -2,6 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
     <test name="Online Calculator Tests">
+        <parameter name="browser" value="firefox"/>
         <classes>
             <class name="onlinecalculator.tests.positivetests.PositiveTests"/>
             <class name="onlinecalculator.tests.negativetests.NegativeTests"/>

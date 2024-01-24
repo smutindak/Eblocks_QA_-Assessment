@@ -1,4 +1,4 @@
-FROM selenium/standalone-firefox:122.0
+FROM selenium/standalone-chrome:120.0.6099.109
 
 # Define Environmental Variables
 ENV MAVEN_VERSION=3.9.2
