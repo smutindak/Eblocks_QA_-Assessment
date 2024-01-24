@@ -95,6 +95,46 @@ Testing will be conducted on standard desktops and laptops with varying operatin
     - Rapidly input a series of calculations.
     - Expected: Evaluate how well the calculator handles rapid user inputs and updates the display.
 
+## 5.5 Testing Approach for Interacting with iframe Element
+
+### 5.5.1 Problem Statement Recap
+
+The online calculator under consideration poses a unique challenge due to its implementation within an iframe element. Iframes can complicate the traditional approach to automation testing, making it challenging to interact directly with the calculator's elements using standard WebDriver methods.
+
+### 5.5.2 Approach
+
+To overcome the challenges posed by the iframe element, a specialized testing approach has been devised. Instead of relying solely on standard WebDriver interactions, this approach leverages JavaScript's capability to execute keypress events. By utilizing JavaScript's ability to manipulate the Document Object Model (DOM), we can effectively send input values to the calculator embedded within the iframe.
+
+### 5.5.3 Implementation Details
+
+1. **JavaScript Execution:**
+   - Utilizing the `executeScript` method provided by WebDriver, JavaScript snippets are injected into the iframe's context. This allows us to simulate keypress events and interact with the calculator's input elements.
+
+2. **executeKeyPressEvents Function:**
+   - A custom JavaScript function, `executeKeyPressEvents`, has been developed to simulate the entry of numerical and operational values into the calculator. This function is designed to ensure compatibility across different browsers and iframe configurations.
+
+3. **Dynamic Element Identification:**
+   - Since direct interaction with iframe elements may not be straightforward, the testing approach dynamically identifies calculator elements by inspecting the iframe's content. This allows for a more flexible and adaptive testing strategy.
+
+### 5.5.4 Advantages
+
+- **Compatibility:** The JavaScript approach is less dependent on the structure of the iframe, making it more adaptable to changes in the application's layout.
+
+- **Flexibility:** By executing keypress events, we bypass some limitations associated with direct WebDriver interactions within iframes, ensuring a more robust testing process.
+
+- **Maintainability:** The use of dynamic element identification reduces the impact of changes in the iframe structure, resulting in a more maintainable test suite.
+
+### 5.5.5 Limitations
+
+- **Dependency on JavaScript Execution:** The success of this approach is contingent on the browser's ability to execute JavaScript, which is generally a standard feature but may have limitations in specific environments.
+
+
+### 5.5.6 Considerations for Future Updates
+
+As the online calculator application evolves, this testing approach will be continuously reviewed and adapted to accommodate any changes in the iframe structure or functionality. Regular compatibility checks with new browser versions will also be conducted to ensure the continued effectiveness of this testing strategy.
+
+This approach offers a pragmatic solution to the challenges posed by iframes, providing a robust foundation for testing the online calculator with the necessary flexibility to adapt to changes in its implementation.
+
 ## 6. Test Execution
 
 ### 6.1 Test Execution Schedule
